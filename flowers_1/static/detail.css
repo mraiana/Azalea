@@ -1,44 +1,132 @@
-header {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/603555d62da78c035512f604/7a4e1b04-b51a-4060-81b7-2b64dc69ce1c/Azalea.jpg");
-    background-size: cover; 
-    color: white;
-    padding: 20px; 
-    width: auto;
-    height: auto;
+:root{
+    --green:#92b694;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
 }
 
-header p {
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+
+}
+.heading{
     text-align: center;
-    font-size: 15px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    font-family: "Courier New";
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+
 }
 
-header h1 {
+.heading span{
+    color: var(--green);
+}
+header{
+    font-size: 62.5%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+}
+
+ header .logo{
     text-align: center;
-    font-size: 25px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    font-family: "Arial";
+    font-size:3rem;
+    color: #333;
+    font-weight: bolder;
+ }
+
+header .logo span{
+    color: var(--green);
 }
 
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/026/045/455/non_2x/beautiful-tulip-flowers-with-copy-space-background-top-view-ai-generative-free-photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color:#999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
 .container {
+    margin-top: 50px;
     align-items: center;
     justify-content: space-between;
 }
 
-.info h1 {
+.text {
     text-align: center;
+    font-size: 4rem;
+    color: var(--green);
+    text-shadow: 1px 1px 1px black;
 }
 
-.flower-detail h2 {
+.info {
+    margin-left: 40%;
+    margin-right: 40%;
     text-align: center;
+    font-size: 1.5rem;
 }
 
-.flower-detail p {
+.info_2 {
+    color: #92b694;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .flower-detail img {
+    margin-top: 20px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -47,34 +135,52 @@ header h1 {
 }
 
 .button {
-    background-color: #92b694;
-    text-decoration: none;
-    color: white;
-    padding: 5px; 
-    border-radius: 5px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    position: relative;
-    left: 46%;
-    transform: translateX(-50%);
+    margin-left: 43%;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
 }
 
 .button:hover {
-    background-image: linear-gradient( #92b694, white );
-    box-shadow: 3px 3px 5px 0 black;
-    color: black;
-    transition: 1s linear;
-}
-
-
-footer {
-    margin-top: 20px;
     background-color: #92b694;
-    padding: 10px;
+    text-shadow: 1px 1px 1px black;
 }
 
-footer p {
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    font-family: "Courier New";
+.footer {
+    margin-top: 10%;
+    background-color: #92b694;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box  a:hover{
+    color: #579c5a;
+    text-decoration: underline;
 }
